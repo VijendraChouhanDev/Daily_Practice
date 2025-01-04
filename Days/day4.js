@@ -83,3 +83,23 @@ function countChar(str){
     }
     console.log(sum)
 }
+
+function aAndB(str){
+  // write code here
+ let result = '';
+ for (let i = 0; i < str.length; i++) {
+   if (str[i] === '?') {
+     const prev = result[i - 1] || ''; 
+     const next = str[i + 1] || '';
+     if (prev !== 'a' && next !== 'a') {
+       result += 'a';
+     } else {
+       result += 'b';
+     }
+   } else {
+     result += str[i];
+   }
+ }
+
+ console.log(result)
+}
